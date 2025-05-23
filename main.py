@@ -1,6 +1,7 @@
 import os
 import signal
 import time
+import sys
 from dotenv import load_dotenv
 
 from database import init_db
@@ -9,6 +10,7 @@ from util_funcs import graceful_exit
 load_dotenv()
 
 if __name__ == "__main__":
+    print(sys.executable)
     print("[!] Starte Anima-Webplattform... (drücke STRG+C zum Beenden)")
     init_db()
 
